@@ -48,3 +48,9 @@ gulp.task('sass-watch', ['processSASS'], function(){
     //recargamos el servidor automaticamente sin oprimir f5
     browserSync.reload();
 });
+
+//Tarea que copia el index.html de los archivos de desarrollo a la carpeta public
+gulp.task('moveIndex',function(){
+    gulp.src('*.html')
+    .pipe(gulp.dest(rutas.public))
+});
